@@ -1,0 +1,13 @@
+JavaScript:
+
+28,27,30,18,16,20,22,25,12 
+
+1. Find the least & max numbers 
+2. Find the missing number between them
+
+NOTE : Do not use any javascript in-built method.
+
+HTML/CSS:
+
+=> Create 3 block elements in single row, minimum of 3 to 4 different solutions.
+

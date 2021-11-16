@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Numbers | Task 2</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='styles.css'>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <div>
+                <h2>Find the Least & max numbers</h2>
+            </div>
+            <div>
+                <form name="numbers" id="numbers">
+                    <fieldset>
+                        <input type="number" name="input1" id="input1" value="28" />
+                        <input type="number" name="input2" id="input1" value="27" />
+                        <input type="number" name="input3" id="input3" value="30" />
+                        <input type="number" name="input4" id="input4" value="18" />
+                        <input type="number" name="input5" id="input5" value="16" />
+                        <input type="number" name="input6" id="input6" value="20" />
+                        <input type="number" name="input7" id="input7" value="22" />
+                        <input type="number" name="input8" id="input8" value="25" />
+                        <input type="number" name="input9" id="input9" value="12" />
+                    </fieldset>
+                    <div class="submitBtn">
+                        <button type="button" id="minBtn">Find the Least Number</button>
+                        <button type="button" id="maxBtn">Find the Max Number</button>
+                    </div>
+                    <div class="result">
+                        <div clss="title">
+                            <h4>Resut:</h4>
+                        </div>
+                        <div id="output" class="output"></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    const minBtn = document.getElementById('minBtn');
+    const maxBtn = document.getElementById('maxBtn');
+
+    
+
+    minBtn.addEventListener('click', function () {
+        const selector = document.querySelectorAll('input');
+        const resultDiv = document.getElementById('output');
+        const Arr = [];
+        let error;
+        selector.forEach(el => {
+            if(el.value)
+                Arr.push(parseInt(el.value));
+             else 
+                error =1;   
+        });
+
+        if(error){
+            alert('Please enter the value')
+        } else {
+            resultDiv.innerHTML = Math.min(...Arr);
+        }
+
+
+        
+    });
+
+    maxBtn.addEventListener('click', function () {
+        const selector = document.querySelectorAll('input');
+        const resultDiv = document.getElementById('output');
+        const Arr = [];
+        let error;
+        selector.forEach(el => {
+            if(el.value)
+                Arr.push(parseInt(el.value));
+             else 
+                error =1;   
+        });
+
+        if(error){
+            alert('Please enter the value')
+        } else {
+            resultDiv.innerHTML = Math.max(...Arr);
+        }
+
+    });
+</script>
+
+</html>
